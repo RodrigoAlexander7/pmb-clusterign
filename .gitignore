@@ -1,0 +1,37 @@
+# virtual env
+venv/
+.env/
+.venv/
+
+# Python files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+*.log
+
+# env variables
+*.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# temp files
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/models/*
+!data/models/.gitkeep
+
+# Models and binaries
+*.joblib
+*.pkl
+
+# IDEs
+.vscode/
+.idea/
