@@ -1,5 +1,5 @@
 import httpx
-import asyncio
+#import asyncio
 from app.utils.url_parse import get_Url
 
 async def get_content_json(url:str):
@@ -10,4 +10,4 @@ async def get_content_json(url:str):
     print(response.json()) 
     return response.json()
 
-a = asyncio.run(get_content_json("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4136787/")) 
+# a = asyncio.run(get_content_json("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4136787/")) 
