@@ -98,10 +98,9 @@ STOPWORDS_ES:frozenset[str] = frozenset({
 
 SYMBOLS = frozenset(
     string.punctuation +
-    '¡¿«»—–„‚‹›…•·‰†‡§¶' +
+    '¡¿«»—–„‚‹›…•·‰†‡§¶@' +
     ''.join(str(i) for i in range(10)) # numbers
 )
-PUNCTUATION_CHARS = frozenset(string.punctuation + '¡¿«»""''—–„‚‹›‚''""…•·‰†‡§¶†‡•‰¿¡')
 
 def is_stopword(word: str) -> bool:
     w = word.lower().strip()
