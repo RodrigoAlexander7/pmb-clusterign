@@ -1,6 +1,7 @@
 import httpx
 #import asyncio
-from app.utils.url_parse import get_Url
+def get_Url(url: str):
+    return url.split('/')[-2]
 
 async def get_content_json(url:str):
     id = get_Url(url)
