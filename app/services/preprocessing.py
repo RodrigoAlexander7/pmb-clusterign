@@ -38,6 +38,8 @@ def lematization(text: str):
 async def preprocessing(url: str):
     preprocessing_strs = set() 
     response_json = await pmb_client.get_content_json(url)
+    if not response_json:  
+        return 
     document_text = extract_texts(response_json)
     lemmas = lematization(document_text)
     for lemma in lemmas:
