@@ -36,7 +36,7 @@ def lematization(text: str):
     return title - important words[]
 """
 async def preprocessing(url: str):
-    preprocessing_strs = set() 
+    preprocessing_strs = "" # string cause is better for TF-IDF 
     response_json = await pmb_client.get_content_json(url)
     if not response_json:  
         return 
@@ -44,8 +44,8 @@ async def preprocessing(url: str):
     lemmas = lematization(document_text)
     for lemma in lemmas:
         if not is_stopword(lemma):
-            preprocessing_strs.add(lemma)
-    return preprocessing_strs # return a list with useful words per article
+            preprocessing_strs+= " " + lemma
+    return preprocessing_strs # return a string with useful words per article
 
 
 

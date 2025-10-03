@@ -10,8 +10,8 @@ def error_writter(url:str):
 
     with open(path, 'w') as f:
         json.dump(data, f)
-    
-    
 
-    
-
+def data_json_writter(processed_data: list):
+    path = BASE_DIR/'data'/'processed'/'processedData.json'
+    with open(path, 'w') as f:
+        json.dump(processed_data, f)
