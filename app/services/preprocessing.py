@@ -36,13 +36,13 @@ def lematization(text: str):
     return title - important words[]
 """
 async def preprocessing(url: str):
-    preprocessing_strs = [] 
+    preprocessing_strs = set() 
     response_json = await pmb_client.get_content_json(url)
     document_text = extract_texts(response_json)
     lemmas = lematization(document_text)
     for lemma in lemmas:
         if not is_stopword(lemma):
-            preprocessing_strs.append(lemma)
+            preprocessing_strs.add(lemma)
     return preprocessing_strs # return a list with useful words per article
 
 

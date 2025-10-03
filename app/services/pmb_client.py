@@ -6,9 +6,19 @@ def get_Url(url: str):
 async def get_content_json(url:str):
     id = get_Url(url)
     new_url = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/{id}/ascii"
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(timeout=30.0) as client:
         response = await client.get(new_url)
-    print(response.json()) 
-    return response.json()
+
+    # validate the succes status
+    if response.status_code != 200:
+        return {"error": f"Request failed with status {response.status_code}"}
+
+    #print(response.json()) 
+    try:
+        print(f"ok ${id}")
+        return response.json()
+    except Exception:
+        print("Response text (not JSON):", response.text[:500])
+        return {"error": "Invalid JSON response", "url": new_url, "raw": response.text[:200]}
 
 # a = asyncio.run(get_content_json("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4136787/")) 

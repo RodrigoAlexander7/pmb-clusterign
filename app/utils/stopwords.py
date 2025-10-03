@@ -1,6 +1,6 @@
 import string
 
-MIN_WORD_LENGTH = 2  
+MIN_WORD_LENGTH = 3  
 MAX_WORD_LENGTH = 14
 
 STOPWORDS_EN:frozenset[str] = frozenset({
