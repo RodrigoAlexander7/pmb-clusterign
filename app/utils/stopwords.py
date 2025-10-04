@@ -113,3 +113,12 @@ def is_stopword(word: str) -> bool:
         return True
 
     return False
+
+def contain_special_character(word: str) -> bool:
+    w = word.lower().strip()
+
+    # is stop word or symbol
+    if w in SYMBOLS:
+        return True
+
+    return False
