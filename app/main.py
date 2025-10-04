@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.routers import process_data
+from app.routers import cluster
 
 app = FastAPI()
 
-app.include_router(process_data.router)
+app.include_router(cluster.router)

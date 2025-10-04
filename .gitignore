@@ -35,3 +35,4 @@ data/models/*
 # IDEs
 .vscode/
 .idea/
+.vercel
