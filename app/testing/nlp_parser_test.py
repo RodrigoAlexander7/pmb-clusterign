@@ -1,4 +1,5 @@
 from app.services.nlp_parser import KeywordExtractor
+from app.services.themes_recomendations import ThemesRecommender
 
 samples = [
     # Español - ciencia
@@ -72,14 +73,11 @@ samples = [
     "Aplicación de IA en diagnósticos médicos y farmacología",
 ]
 
-extractor = KeywordExtractor(api_key="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")
+extractor = KeywordExtractor(api_key="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")
+recommender = ThemesRecommender(api_key="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")
 
 for str in samples:
-    print(extractor.extract(str))
-
-
-#for str in samples:
-#        keywords = extractor.extract(str)
-#        print(f"- {str}:")
-#        for k in keywords:
-#            print(f"\t{k}")
+    keywords = extractor.extract(str)
+    print(f"keywords: {keywords}")
+    recomendations = recommender.recommend(keywords)
+    print(f"recomendations: {recomendations}")
