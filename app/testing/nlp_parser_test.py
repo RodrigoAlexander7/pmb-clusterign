@@ -73,8 +73,8 @@ samples = [
     "Aplicación de IA en diagnósticos médicos y farmacología",
 ]
 
-extractor = KeywordExtractor(api_key="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")
-recommender = ThemesRecommender(api_key="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")
+extractor = KeywordExtractor(api_key="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")
+recommender = ThemesRecommender(api_key="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")
 
 for str in samples:
     keywords = extractor.extract(str)
