@@ -47,8 +47,3 @@ async def preprocessing(url: str):
             preprocessing_strs+= " " + lemma
     return preprocessing_strs # return a string with useful words per article
 
-
-
-
-
-
