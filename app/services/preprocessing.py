@@ -14,7 +14,7 @@ def extract_texts(obj): # obj represent a dictionary or an list (cause json form
                 results+=(extract_texts(v))
     elif isinstance(obj, list):
         for item in obj:
-            results+=(extract_texts(item))
+            results+=(" " + extract_texts(item))
     
     return results
 

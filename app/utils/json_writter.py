@@ -15,3 +15,8 @@ def data_json_writter(processed_data: list):
     path = BASE_DIR/'data'/'processed'/'processedData.json'
     with open(path, 'w') as f:
         json.dump(processed_data, f)
+
+def no_clean_data_json_writter(array_texts: list):
+    path = BASE_DIR/'data'/'processed'/'noCleanProcessedData.json'
+    with open(path, 'w') as f:
+        json.dump(array_texts, f)
