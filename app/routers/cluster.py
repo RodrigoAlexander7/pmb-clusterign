@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from app.services.clustering import get_cluster_json
-from app.services.clustering import get_bigrams_clusters_labeled_json
+from app.services.clustering import get_bigram_clusters_labeled_json
+from app.services.clustering import get_unigram_clusters_labeled_json
 
 router = APIRouter(prefix="/cluster", tags=["cluster"])
 
@@ -10,4 +11,8 @@ async def getClusters():
 
 @router.get('/bigramKeywords')
 async def getKeywordsBigram():
-    return get_bigrams_clusters_labeled_json()
+    return get_bigram_clusters_labeled_json()
+
+@router.get('/unigramKeywords')
+async def getKeywordsUnigram():
+    return get_unigram_clusters_labeled_json()
