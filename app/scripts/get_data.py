@@ -1,4 +1,5 @@
 from app.services.read_csv import get_data_from_csv
+from app.services.read_csv import get_url_title_from_csv
 from app.services.preprocessing import preprocessing
 from app.services.preprocessing import extract_texts
 from app.services.pmb_client import get_content_json
@@ -29,5 +30,5 @@ async def get_documents_words():
     return response
 
 
-asyncio.run(get_documents_words())
+get_url_title_from_csv()
 print("succes")
