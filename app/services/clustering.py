@@ -1,13 +1,22 @@
 from app.utils.base_dir import BASE_DIR
+from app.services.data import get_id_by_title
 import json
 
 path = BASE_DIR/'data'/'processed'/'clusters.json' 
 
 def get_cluster_json():
-    data = []
+    data = {}
+    res = {}
+
     with open(path, 'r') as f:
         data = json.load(f)
-    return data
+
+    for key, title_list in data.items():
+        res[key] = []
+        for title in title_list:
+            res[key].append({title: get_id_by_title(title)}) 
+
+    return res
 
 b_kwr_path = BASE_DIR/'data'/'processed'/'bigramKeywords.json' 
 u_kwr_path = BASE_DIR/'data'/'processed'/'unigramKeywordsKeyBERT.json' 
