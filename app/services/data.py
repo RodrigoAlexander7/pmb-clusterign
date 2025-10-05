@@ -8,4 +8,3 @@ url_title_dict = get_url_title_from_csv_json()
 
 def get_title_by_id(id:str):
     return url_title_dict[id]
-    
