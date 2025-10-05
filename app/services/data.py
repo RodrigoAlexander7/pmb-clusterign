@@ -15,7 +15,7 @@ def get_title_by_id(id:str):
 
 def get_id_by_title(title:str):
     for key, value in url_title_dict.items():
-        if title in key:
+        if title in value:
             return key
 
 def get_ref_by_id(id: str):
