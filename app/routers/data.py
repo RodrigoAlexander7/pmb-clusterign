@@ -9,7 +9,7 @@ router = APIRouter(prefix="/data", tags=["data"])
 async def getTitleById(id:str):
     return dt.get_title_by_id(id)
 
-@router.get('/igByTitle')
+@router.get('/idByTitle')
 async def getIdByTitle(title:str):
     return dt.get_id_by_title(title)
 
