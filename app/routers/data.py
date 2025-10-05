@@ -1,6 +1,5 @@
 from fastapi import APIRouter
-from app.utils.base_dir import BASE_DIR
-import json
+
 import app.services.data as dt
 
 router = APIRouter(prefix="/data", tags=["data"])
@@ -9,6 +8,10 @@ router = APIRouter(prefix="/data", tags=["data"])
 @router.get('/titleById')
 async def getTitleById(id:str):
     return dt.get_title_by_id(id)
+
+@router.get('/igByTitle')
+async def getIdByTitle(title:str):
+    return dt.get_id_by_title(title)
 
 @router.get('/keywordsById')
 async def getKeywordsById(id:str):

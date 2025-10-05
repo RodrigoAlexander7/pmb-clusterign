@@ -13,6 +13,11 @@ url_title_dict = get_url_title_from_csv_json()
 def get_title_by_id(id:str):
     return url_title_dict[id]
 
+def get_id_by_title(title:str):
+    for key, value in url_title_dict.items():
+        if title in key:
+            return key
+
 def get_ref_by_id(id: str):
     ref_dict = {}   # is a dict with {PMB1235 : [ref 01, ref02]}
     with open(references_path, 'r') as f:
