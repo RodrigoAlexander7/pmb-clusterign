@@ -20,13 +20,7 @@ __pycache__/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# temp files
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-data/models/*
-!data/models/.gitkeep
+
 
 # Models and binaries
 *.joblib
