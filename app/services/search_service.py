@@ -3,7 +3,6 @@ from whoosh.qparser import QueryParser
 from app.utils.base_dir import BASE_DIR
 import os
 
-# Ruta al índice (ajustar si es necesario)
 INDEX_DIR = BASE_DIR/'notebooks'/'indexdir'
 
 def search_articles(query: str, limit: int = 5):
