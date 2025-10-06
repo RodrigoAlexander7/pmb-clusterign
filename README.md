@@ -11,6 +11,20 @@
 A sophisticated ML pipeline that automatically processes, clusters, and indexes scientific articles from PubMed Central (PMC) using state-of-the-art NLP techniques and unsupervised learning.
 
 ---
+## ScreenShots
+- **AI Chatbot**
+<img width="1903" height="970" alt="Screenshot 2025-10-06 100259" src="https://github.com/user-attachments/assets/2e06eb21-72f2-44ce-b25a-997e5cc13672" />
+
+- **Dinamic and visual clusters**
+<img width="1905" height="974" alt="Screenshot 2025-10-06 100336" src="https://github.com/user-attachments/assets/14754dab-28c3-4bcd-ad6a-25955a091f3a" />
+
+- **References Tree**
+<img width="1898" height="964" alt="Screenshot 2025-10-06 100443" src="https://github.com/user-attachments/assets/812f116f-bbc4-4e8c-acf0-8cee88b63d50" />
+
+- **Advanced search: Inverted index**
+<img width="1901" height="966" alt="Screenshot 2025-10-06 100354" src="https://github.com/user-attachments/assets/a552499a-9d33-400a-bf63-c45d2c10b60d" />
+
+---
 
 ## 🎯 Key Features
 
@@ -205,3 +219,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Built with ❤️ for RodrygoLeu**
+
