@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import cluster, data
+from app.routers import cluster, data, search
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -14,3 +14,4 @@ app.add_middleware(
 
 app.include_router(cluster.router)
 app.include_router(data.router)
+app.include_router(search.router)
